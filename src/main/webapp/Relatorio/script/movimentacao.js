@@ -7,11 +7,15 @@
 function getRelTabMov(){
     
     let dados = {
-        cliente : $('#valCliente').val(),
-        container : $('#valContainer').val(),
-        dataIniciadoDe : $('#dataIniciadoAte').val(),
-        dataIniciadoAte : $('#dataIniciadoAte').val()
+        params : {
+            cliente : $('#valCliente').val(),
+            container : $('#valContainer').val(),
+            dataIniciadoDe : $('#dataIniciadoDe').val(),
+            dataIniciadoAte : $('#dataIniciadoAte').val()
+        }
     };
+    
+    console.log(dados);
     
     StartLoading();
     ServiceMovimentacao.GetRelByMov(JSON.stringify(dados), function(){

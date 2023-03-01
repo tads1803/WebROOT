@@ -4,8 +4,16 @@
  */
 
 function getRelTabCat(){
+    
+    let dados = {
+        params : {
+            cliente : $('#valCliente').val(),
+            container : $('#valContainer').val()
+        }
+    };
+    
     StartLoading();
-    ServiceContainer.GetRelByCat(function(){
+    ServiceContainer.GetRelByCat(JSON.stringify(dados),function(){
         StopLoading();
         if (this.status === 200){
             try{
