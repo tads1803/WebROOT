@@ -8,9 +8,9 @@ var ServiceContainer = {
     xhrSuccess : function() { this.callback.apply(this, this.arguments); },
     xhrError : function() { this.callback.apply(this, this.arguments); },
 
-    GetRelByCat : function(Callback, params){
+    GetRelByCat : function(dados, Callback, params){
         var headers = [{label : "token", value : window.localStorage.getItem("token")}];
-        this.ServiceRequest(null, headers, 'POST', 'ws/container/public/getRelByCat', Callback, params);
+        this.ServiceRequest(dados, headers, 'POST', 'ws/container/public/getRelByCat', Callback, params);
     },
 
     ServiceRequest : function(data, headers, verb, url, Callback, params){

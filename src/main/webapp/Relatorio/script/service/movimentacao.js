@@ -8,9 +8,9 @@ var ServiceMovimentacao = {
     xhrSuccess : function() { this.callback.apply(this, this.arguments); },
     xhrError : function() { this.callback.apply(this, this.arguments); },
 
-    GetRelByMov : function(Callback, params){
+    GetRelByMov : function(dados, Callback, params){
         var headers = [{label : "token", value : window.localStorage.getItem("token")}];
-        this.ServiceRequest(null, headers, 'POST', 'ws/movimentacao/public/getRelByMov', Callback, params);
+        this.ServiceRequest(dados, headers, 'POST', 'ws/movimentacao/public/getRelByMov', Callback, params);
     },
 
     ServiceRequest : function(data, headers, verb, url, Callback, params){

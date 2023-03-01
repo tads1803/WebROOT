@@ -5,8 +5,16 @@
 
 
 function getRelTabMov(){
+    
+    let dados = {
+        cliente : $('#valCliente').val(),
+        container : $('#valContainer').val(),
+        dataIniciadoDe : $('#dataIniciadoAte').val(),
+        dataIniciadoAte : $('#dataIniciadoAte').val()
+    };
+    
     StartLoading();
-    ServiceMovimentacao.GetRelByMov(function(){
+    ServiceMovimentacao.GetRelByMov(JSON.stringify(dados), function(){
         StopLoading();
         if (this.status === 200){
             try{

@@ -7,6 +7,11 @@
 /* global google */
 
 function onLoad(){
+    $('#btFiltrar').click(function(){ Filtrar(); });
+    Filtrar();
+}
+
+function Filtrar(){
     getRelTabCat();
     getRelTabMov();
 }
