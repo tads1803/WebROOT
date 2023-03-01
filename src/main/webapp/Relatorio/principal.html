@@ -9,6 +9,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <link href="../style/boxFiltro.css" rel="stylesheet" type="text/css"/>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         
         <script src="https://www.gstatic.com/charts/loader.js"></script>
@@ -27,6 +29,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     <body>
     <center>
         <div class="principal">
+            <div class="boxFiltro">
+                <div class="campos">
+                    Cliente:<br>
+                    <input id="valCliente" type="text" placeholder="000.000.000-00" maxlength="18">
+                </div>
+                &nbsp;-&nbsp;
+                <div class="campos">
+                    Container:<br>
+                    <input id="valContainer" type="text" placeholder="ASDF1234567" maxlength="11">
+                </div>
+                <br><br>
+                <div class="campos">
+                    Iniciado de:<br>
+                    <input id="dataIniciadoDe" type="datetime-local">
+                </div>
+                &nbsp;-&nbsp;
+                <div class="campos">
+                    Iniciado até:<br>
+                    <input id="dataIniciadoAte" type="datetime-local">
+                </div>
+                <br><br>
+                <div class="campos">
+                    <button id="btFiltrar">Filtrar</button>
+                </div>
+            </div>
+            
             <div style="position: relative; display: block; width: 100%;">
                 <h1>Categoria</h1>
                 <div style="width: 100%;">
