@@ -1,0 +1,28 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 1 de mar de 2023, 12:55:28
+    Author     : Portuary
+*/
+
+.boxFiltro{
+    position: relative;
+    display: block;
+    
+    width: calc(100% - 2.6em);
+    height: auto;
+    
+    padding: .3em 1em;
+    margin: .3em .3em;
+    
+    text-align: left;
+    
+    border: 1px solid #dddddd;
+}
+
+.campos{
+    position: relative;
+    display: inline-block;
+}
